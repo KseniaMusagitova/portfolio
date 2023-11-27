@@ -1,8 +1,9 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 class Project(models.Model):
     title = models.CharField(max_length=200, blank=False)
-    description = models.TextField(max_length=500, default='')
+    description = RichTextField()
     link = models.URLField(max_length=500, default='')
 
     def __str__(self):
