@@ -23,23 +23,20 @@
                     <div class="card card-body h-100 border-info" id="profile-wrapper">
                         <img id='profile-pic' src="{% static 'images/foto2.jpg' %}">
                         <hr>
+                        <br>
                         <h4>Hi I'm Kseniia</h4>
                         <p>
                             I love coding, doing research and collaborationg
                         </p>
                     </div>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-5">
                     <div class="card card-body h-100 border-info">
                     <h4>About me</h4>
                     <hr>
                     <p>
                         🌟 About Me:
                         I am a dedicated and results-driven Django and Python developer with a passion for building innovative solutions that make a meaningful impact. 🚀
-                    </p>
-                    <p>
-                        🚀 Skills Snapshot:
-                        My proficiency includes Python, Django, RESTful APIs, SQL, and more. I am well-versed in industry best practices, coding standards, and have a keen eye for optimizing performance.
                     </p>
                     <p>
                         🌐 What Drives Me:
@@ -57,20 +54,47 @@
 
                 </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="card card-body h-100 border-info">
+                        <h4>My skills</h4>
+                        <hr>
+                        
+                            <h5>Languages:</h5>
+                            Python, SQL (Postgres), HTML/CSS, Bash
+                        
+                        <hr>
+            
+                            <h5>Frameworks:</h5>
+                            Django, Django REST Framework, FastAPI, Flask, Bootstrap, unittest, pytest
+                        
+                        <hr>
+                       
+                            <h5>Developer Tools:</h5>
+                            Git, Docker, Kubernetes, PyCharm, Visual Studio Code, Postman, DBeaver, Miro, Notion, Slack, Scrum, Asana, Jira
+                       
+                        <hr>
+                   
+                            <h5>Libraries:</h5>
+                            Beautiful soup, Jinja 2, Pandas, NumPy
+                        
+                    </div>
+                </div>
             </div>
             <br>
             
             <div class="row">
                 {% for project in projects %}
-                <div class="col-md-6">  
+                <div class="col-md-6">
                     <div class="card card-body h-100">
                         <h5><a href="{{ project.link }}">{{ project.title }}</a></h5>
                         <hr>
-                        <p>{{ project.description|safe }}</p>
+                        <div class="description" data-fulltext="{{ project.description|escape }}">
+                            <p class="short-text">{{ project.description|truncatewords:20|safe }}</p>
+                            <p class="full-text" style="display: none;">{{ project.description|safe }}</p>
+                            <a href="#" class="read-more">Read more</a>
+                        </div>
                     </div>
-                    
                 </div>
-                <br>
                 {% endfor %}
             </div>
 
@@ -105,6 +129,8 @@
             
             <br>
         </div>
+
+        <script src="{% static '/js/scripts.js' %}"></script>
 
     </body>
 </html>

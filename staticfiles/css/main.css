@@ -22,3 +22,21 @@ ul{
     width: 20px;
     height: 20px;
 }
+/* Добавьте это в ваш файл main.css или создайте новый CSS-файл */
+
+/* Стили для короткого текста */
+.short-text {
+  display: block; /* Изначально установлено как block */
+}
+
+/* Стили для полного текста */
+.full-text {
+  display: none; /* Изначально установлено как none */
+}
+
+/* Стили для ссылок "Читать далее" */
+.read-more {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
