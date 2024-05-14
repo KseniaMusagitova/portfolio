@@ -19,4 +19,4 @@ def home(request):
         contact.message=message
         contact.save()
 
-    return render(request, 'base/home.html', context)
+    return render(request, 'base/index.html', context)
