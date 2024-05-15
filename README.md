@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a personal portfolio project built with Django. The website displays information about the owner, their skills, projects, and provides a contact form for reaching out.
+This is a personal portfolio project built with Django. The website displays information about me as a Python developer, my skills, projects and has a contact form for communication.
 
 ## Features
 
