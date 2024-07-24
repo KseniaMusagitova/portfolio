@@ -1,121 +1,220 @@
 {% load static %}
 
-
-
 <!-- <h3>Hello</h3>
 
 <img src="{% static 'images/foto.jpg' %}"> -->
 
-<!DOCTYPE html> 
-<html>
-    <head>
-        <title>Portfolio</title>
-        <link href="{% static '/css/main.css' %}" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <style>
-            .custom-card {
-                height: 0 !important;
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        </style>
+    <title>Portfolio</title>
+    <link href="{% static '/css/main.css' %}" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
 
-    </head>
-    <body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom navbar-custom-border">
+    <div class="container mt-3 mb-3">
+
+        <h1 class="navbar-brand">Xenia</h1>
+        <!-- Navbar Toggler for Mobile -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <!-- Navbar Links -->
+<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#about-me">About Me</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#portfolio">My Portfolio</a>
+        </li>
+    </ul>
+</div>
+
+
+    </div>
+
+</nav>
+
+<!-- About Me Section -->
+<div id="about-me" class="container-fluid mt-0 about-me-section light-purple-bg w-100">
+    <div class="container">
         <br>
         <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card card-body h-100 border-info" id="profile-wrapper">
-                        <img id='profile-pic' src="{% static 'images/foto2.jpg' %}">
-                        <hr>
-                        <br>
-                        <h4>Hi I'm Kseniia</h4>
-                        <p>
-                            I love coding, doing research and collaborationg
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="card card-body h-100 border-info">
-                    <h4>About me</h4>
-                    <hr>
-                    <p>
-                        🌟 About Me:
-                        I am a dedicated and results-driven Django and Python developer with a passion for building innovative solutions that make a meaningful impact. Google-certified in Agile project management.
-                    </p>
-                    <p>
-                        🌐 What Drives Me:
-                        I am motivated by the potential of technology to address real-world challenges. Whether it's crafting efficient code or designing modular systems, I find joy in creating solutions that make a positive difference.
-                    </p>
-                    <p>
-                        🤝 Let's Connect:
-                        I am open to networking with like-minded professionals, exploring exciting opportunities, and contributing to projects that push the boundaries of what's possible. Let's connect and explore how we can collaborate to bring ideas to life!
-                    </p>
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Profile Card -->
+            <div class="card card-body h-100 profile-section">
+                <img id="profile-pic" src="{% static 'images/foto2.jpg' %}" class="img-fluid">
 
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6">
-                                <ul class="social-links text-center">
-                                    <li class="mr-3"><a href="mailto:kseniamusagitova@gmail.com"><img class="social" src="{% static 'images/email.png' %}" alt="Email"></a></li>
-                                    <li class="mr-3"><a href="https://www.linkedin.com/in/kseniia-musagitova/" target="_blank"><img class="social" src="{% static 'images/linkedin.png' %}" alt="LinkedIn"></a></li>
-                                    <li class="mr-3"><a href="https://github.com/KseniaMusagitova" target="_blank"><img class="social" src="{% static 'images/github.png' %}" alt="GitHub"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-body h-100 border-info">
-                        <h4>My skills</h4>
-                        <hr>
-                        
-                            <h5>Languages:</h5>
-                            Python, SQL (Postgres), HTML/CSS, Bash
-                        
-                        <hr>
-            
-                            <h5>Frameworks:</h5>
-                            Django, Django REST Framework, FastAPI, Flask, Bootstrap, unittest, pytest
-                        
-                        <hr>
-                       
-                            <h5>Developer Tools:</h5>
-                            Git, Docker, Kubernetes, PyCharm, Visual Studio Code, Postman, DBeaver, Miro, Notion, Slack, Scrum, Asana, Jira
-                       
-                        <hr>
-                   
-                            <h5>Libraries:</h5>
-                            Beautiful soup, Jinja 2, Pandas, NumPy
-                        
-                    </div>
-                </div>
             </div>
-            <br>
-            
-            <div class="row">
-                {% for project in projects %}
-                <div class="col-md-6 mb-4">
-                    <div class="card card-body h-100">
-                        <h5><a href="{{ project.link }}">{{ project.title }}</a></h5>
-                        
-                        <p>{{ project.description|safe }}</p>
-                    
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-
-            
+        </div>
+        <div class="col-md-8">
+            <!-- About Card -->
+            <div class="card card-body h-100 about-section">
+                <h4>About Me</h4>
+                <hr>
+                <p>Hi, I'm Kseniia. I love coding, doing research and collaborating.</p>
+                <p>
+                    About Me:
+                    I am a dedicated and results-driven Django and Python developer with a passion for building innovative solutions that make a meaningful impact. Google-certified in Agile project management.
+                </p>
+                <p>
+                    What Drives Me:
+                    I am motivated by the potential of technology to address real-world challenges. Whether it's crafting efficient code or designing modular systems, I find joy in creating solutions that make a positive difference.
+                </p>
                 <br>
+                <h4>Follow me</h4>
+                <hr>
+                <!-- Social Links -->
+                <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+            <ul class="social-links">
+                <li><a href="mailto:kseniamusagitova@gmail.com"><img class="social" src="{% static 'images/email2.png' %}" alt="Email"></a></li>
+                <li><a href="https://www.linkedin.com/in/kseniia-musagitova/" target="_blank"><img class="social" src="{% static 'images/linkedin.png' %}" alt="LinkedIn"></a></li>
+                <li><a href="https://github.com/KseniaMusagitova" target="_blank"><img class="social" src="{% static 'images/github.png' %}" alt="GitHub"></a></li>
+                <li><a href="https://www.instagram.com/xenia_lwm/" target="_blank"><img class="social-icon" src="{% static 'images/instagram.png' %}" alt="Instagram"></a></li>
+                <li><a href="https://www.tiktok.com/@xenia_lvm" target="_blank"><img class="social-icon" src="{% static 'images/tiktok.png' %}" alt="TikTok"></a></li>
+                <li><a href="https://www.youtube.com/@xenia_lwm" target="_blank"><img class="social-icon" src="{% static 'images/youtube.png' %}" alt="YouTube"></a></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
 
 
-                
-            
-            <br>
+            </div>
         </div>
 
-    </body>
+    </div>
+        </div>
+    <div class="section-divider"></div>
+</div>
+
+<!-- Portfolio Section -->
+<div id="portfolio" class="container-fluid mt-0 portfolio-section navbar-custom-bg w-100">
+    <br>
+    <div class="container">
+    <div class="row mt-0">
+        <div class="col-md-12">
+            <div class="card card-body navbar-custom-bg">
+                <h4>My portfolio</h4>
+                <hr>
+
+                <!-- Portfolio Categories -->
+                <div class="portfolio-categories text-center">
+                    <button class="btn btn-outline-info" onclick="filterProjects('all')">All</button>
+                    <button class="btn btn-outline-info" onclick="filterProjects('web-design')">Web Design</button>
+                    <button class="btn btn-outline-info" onclick="filterProjects('applications')">Applications</button>
+                    <button class="btn btn-outline-info" onclick="filterProjects('development')">Development</button>
+                </div>
+                <!-- Portfolio Projects -->
+                <div class="row mt-4" id="portfolio-projects">
+                    {% for project in projects|slice:":8" %}
+                    <div class="col-md-3 mb-4 d-flex align-items-stretch">
+                        <div class="card card-body h-100 project-item-green d-flex flex-column">
+                            <h5>{{ project.title }}</h5>
+                            <p class="project-description">{{ project.description|safe }}</p>
+                            <a href="{{ project.link }}" target="_blank" class="view-project-link mt-auto">View Project</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+        </div>
+    <div class="section-divider"></div>
+</div>
+
+
+<!--&lt;!&ndash; Contact Section &ndash;&gt;-->
+<!--<div class="container-fluid contact-section">-->
+<!--    <div class="container" id="contact-section">-->
+<!--        <h4 class="text-left">Contact Me</h4> &lt;!&ndash; Перенесен за пределы контейнера contact-form-container &ndash;&gt;-->
+<!--        <br>-->
+<!--        <div class="contact-form-container">-->
+
+<!--        &lt;!&ndash; Contact Form &ndash;&gt;-->
+<!--        <form>-->
+<!--            <div class="row">-->
+<!--                <div class="col-sm-6">-->
+<!--                    <div class="form-group">-->
+<!--                        <label for="firstname">First Name</label>-->
+<!--                        <input type="text" class="form-control" id="firstname">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-sm-6">-->
+<!--                    <div class="form-group">-->
+<!--                        <label for="lastname">Last Name</label>-->
+<!--                        <input type="text" class="form-control" id="lastname">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--                <label for="email">Email</label>-->
+<!--                <input type="email" class="form-control" id="email">-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--                <label for="message">Message</label>-->
+<!--                <textarea class="form-control" id="message" rows="3"></textarea>-->
+<!--            </div>-->
+<!--            <div class="form-group text-center">-->
+<!--                <button type="submit" class="btn btn-primary btn-submit">Submit</button>-->
+<!--            </div>-->
+<!--        </form>-->
+
+<!--    </div>-->
+<!--        <br>-->
+<!--</div>-->
+<!--    </div>-->
+
+
+<!-- Footer -->
+<footer class="footer navbar-light footer-custom navbar-custom-border mt-0">
+    <br>
+    <br>
+
+    <div class="container text-center"> <!-- Добавлено text-center -->
+        <div class="row">
+            <div class="col-md-6">
+                <h5 class="text-center">Xenia</h5> <!-- Добавлено text-center -->
+            </div>
+            <div class="col-md-6">
+                <p class="mt-0">&copy; 2024 Kseniia Musagitova. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+</footer>
+
+
+
+
+
+<!-- Bootstrap JS and Custom JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="{% static '/js/script.js' %}"></script>
+
+</body>
 </html>

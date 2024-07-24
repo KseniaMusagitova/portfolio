@@ -1,25 +1,295 @@
-body {
-    background-color: #F8F8F8!important;
+html {
+    scroll-behavior: smooth;
 }
 
-#profile-wrapper{
+body {
+    background-color: #F8F8F8;
+    padding-top: 70px;
+}
+
+
+#profile-wrapper {
     text-align: center;
 }
 
+#profile-pic {
+    border-radius: 20px; /* Задаем скругление углов */
+}
+
+.about-me-section {
+    margin-top: 0 !important; /* Убрать верхний отступ только для секции "About Me" */
+}
+
+.about-me-section .card {
+    border: none; /* Убираем границу у карточек */
+}
 
 
-ul{
+.light-purple-bg {
+    background-color: #a2abc3 !important; /* Используйте ваш светло-фиолетовый цвет */
+    padding: 0; /* Установите padding в 0 */
+    border-radius: 0; /* Добавьте скругление углов, если необходимо */
+    margin: 0; /* Установите margin в 0 */
+}
+
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.navbar-brand  {
+    font-size: 2.0em!important;
+}
+
+h4, .navbar-brand, .footer-title {
+    font-family: 'Lora', serif;
+    font-stretch: expanded; /* Немного расширяет шрифт */
+    font-size: 1.9em!important;
+}
+
+h5, .navbar-brand, .footer-title {
+    font-family: 'Lora', serif;
+    font-stretch: expanded; /* Немного расширяет шрифт */
+    font-size: 1.6em!important;
+}
+
+.project-item-green p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px; /* Измените размер шрифта по вашему вкусу */
+    color: black; /* Цвет текста */
+}
+
+.profile-section, .about-section, .skills-section p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px; /* Измените размер шрифта по вашему вкусу */
+    color: black; /* Цвет текста */
+}
+
+.portfolio-categories .btn-outline-info {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px; /* Измените размер шрифта по вашему вкусу */
+    color: black; /* Цвет текста */
+}
+
+.view-project-link {
+    color: black;
+    text-decoration: underline;
+    font-size: 1.2em; /* Увеличиваем размер шрифта на 10% */
+    margin-top: auto;
+}
+
+.navbar-custom {
+    background-color: #E0E0E0; /* Светло-бежево-серый цвет для navbar */
+    margin-bottom: 0 !important; /* Убедитесь, что у navbar нет нижнего отступа */
+    position: fixed!important; /* Фиксирует навбар в верхней части страницы */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.navbar-custom-border {
+    border-bottom: 1px solid black; /* Черная граница снизу для navbar */
+}
+
+.navbar-custom-bg {
+    background-color: #E0E0E0!important; /* Используйте тот же цвет, что и у navbar */
+    padding: 0; /* Установите padding в 0 */
+    border-radius: 5px; /* Добавьте скругление углов, если необходимо */
+    margin: 0; /* Установите margin в 0 */
+}
+
+.text-black {
+    color: black;
+}
+
+.footer-custom {
+    background-color: #f8d7da!important; /* Светло-серый цвет для footer */
+    color: black; /* Темно-серый текст */
+}
+
+ul {
     padding: 0;
     list-style-type: none;
 }
 
-.social-links ul, li{
-    list-style-type: none;
-    display: inline-block;
+/* Стили для списка social-links */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрируем ссылки */
+    gap: 10px; /* Добавляем промежуток между ссылками */
+    padding: 0; /* Убираем стандартные отступы */
+    list-style: none; /* Убираем маркеры списка */
 }
 
-.social{
-    width: 20px;
-    height: 20px;
+.social-links li {
+    flex: 1 1 auto; /* Устанавливаем flex-grow и flex-shrink в auto для одной линии */
+    margin-bottom: 10px; /* Добавляем отступ снизу */
 }
+
+.social-links li img {
+    width: 40px; /* Фиксированная ширина для иконок */
+    height: 40px; /* Фиксированная высота для иконок */
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        gap: 10px; /* Добавляем промежуток между ссылками */
+    }
+
+    .social-links li {
+        flex: 1 1 calc(33.333% - 10px); /* Распределение ссылок по три в ряд */
+        max-width: calc(33.333% - 10px); /* Ограничиваем ширину */
+        margin-bottom: 10px; /* Добавляем отступ снизу */
+    }
+
+    .social-links li img {
+        width: 40px; /* Меньшая ширина для иконок на мобильных устройствах */
+        height: 40px; /* Меньшая высота для иконок на мобильных устройствах */
+    }
+}
+
+
+
+/* Черная линия */
+.section-divider {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin: 0; /* Отступы сверху и снизу */
+}
+
+/* Добавленные стили для карточек */
+.profile-section,
+.about-section,
+.skills-section {
+    background-color: #a2abc3 !important; /* Серо-синий цвет для карточек */
+    padding: 20px;
+    margin-bottom: 20px;
+    border: none; /* Убираем границу */
+    border-radius: 0;
+}
+
+.portfolio-section .container-fluid {
+    padding: 0 !important; /* Установите padding в 0 */
+}
+
+.contact-section .card,
+.portfolio-section .card {
+    border: none !important;
+}
+
+.portfolio-categories .btn {
+    color: black; /* Черный цвет текста */
+    background-color: #f8d7da; /* розовый фон */
+    border-color: black; /* Черные границы */
+    border-radius: 20px; /* Скругление углов */
+    margin: 5px; /* Отступы между кнопками */
+}
+
+.portfolio-categories .btn:hover {
+    background-color: #E0E0E0; /* Цвет фона при наведении */
+    color: black; /* Цвет текста при наведении */
+    border-color: black; /* Черные границы */
+}
+
+
+.project-item h5 {
+    color: black; /* Черный цвет заголовка */
+}
+
+.project-item p {
+    color: black; /* Черный цвет текста */
+}
+
+.project-item-green {
+    background-color: #B5BBAF!important; /* Зеленый цвет фона */
+    color: white; /* Белый цвет текста */
+    border: none; /* Убираем рамку */
+    padding: 0;
+    border-radius: 20px!important; /* Скругленные углы */
+
+
+}
+
+.contact-section {
+    background-color: #a2abc3; /* Серо-фиолетовый цвет фона */
+    padding: 40px 0; /* Отступы сверху и снизу */
+}
+
+.contact-section .contact-form-container {
+    background-color: #a2abc3; /* Белый фон формы */
+    padding: 40px; /* Внутренние отступы формы */
+    border-radius: 20px; /* Скругленные углы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.contact-section .form-group {
+    margin-bottom: 15px; /* Отступ между полями формы */
+}
+
+.contact-section label {
+    display: block; /* Метки формы */
+    margin-bottom: 5px; /* Отступ снизу меток */
+    color: #333; /* Цвет текста меток */
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%; /* Ширина полей */
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Границы полей */
+    border-radius: 20px; /* Скругленные углы полей */
+    box-sizing: border-box; /* Учитывать паддинги и границы */
+    background-color: #E0E0E0;
+}
+
+.contact-section .btn-submit {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    background-color: black; /* Зеленый цвет кнопки */
+    color: white; /* Белый цвет текста */
+    padding: 10px 20px; /* Внутренние отступы */
+    border-color: black;
+    border-radius: 20px; /* Скругленные углы */
+    cursor: pointer; /* Указатель курсора */
+    text-align: center;
+}
+
+.contact-section .btn-submit:hover {
+    background-color: #E0E0E0; /* Зеленый цвет кнопки при наведении */
+    color: black;
+    border-color: black;
+    border-radius: 20px; /* Скругленные углы */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-body {
+    padding-bottom: 1rem;
+}
+
+.card-body h5, p {
+    color: black; /* Или любой другой цвет, который вы хотите использовать */
+}
+
+/* Добавьте медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+    .footer .container {
+        text-align: center; /* Центрирование текста */
+    }
+    .footer .row > div {
+        text-align: center; /* Центрирование текста внутри колонок */
+    }
+}
+
+
+
+
 

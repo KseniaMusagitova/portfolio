@@ -5,18 +5,14 @@ from django.http import HttpResponse
 def home(request):
     projects = Project.objects.all()
 
-    context = {
-        'projects': projects,
-    }
-
-    if request.method=="POST":
-        contact = Contact()
+    if request.method == "POST":
         email = request.POST.get('email')
         name = request.POST.get('name')
         message = request.POST.get('message')
-        contact.email=email
-        contact.name=name
-        contact.message=message
-        contact.save()
+        Contact.objects.create(email=email, name=name, message=message)
+
+    context = {
+        'projects': projects,
+    }
 
     return render(request, 'base/index.html', context)
